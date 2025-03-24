@@ -4,14 +4,29 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.bankline_100.R
 import android.os.Bundle
 import android.content.Intent
+import com.example.bankline_100.databinding.ActivityWelcomeBinding
+import com.example.bankline_100.domain.Correntista
+import com.example.bankline_100.ui.statement.BankStatementActivity
 
 class WelcomeActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContetView(R.layout.activity_welcome)
+    private val binding by lazy {
+        ActivityWelcomeBinding.inflate(layoutInflater)
+
+
     }
 
-    private fun setContetView(activityWelcome: Int) {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(binding.root)
 
+        binding.btContinue.setOnClickListener {
+            val accountHolderId = binding.etAccountHolderld.text.toString().toInt()
+            val accountHolder = Correntista(accountHolderId)
+
+            val intent = Intent(this, BankStatementActivity::class.java).apply {
+                putExtra(BankStatementActivity.EXTRA_ACCOUNT_HOLDER, accountHolder)
+            }
+            startActivity(intent)
+        }
     }
 }
