@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">bankline-1.0.0</string>
+    <string name="app_name" translatable="false">Minhas Finanças</string>
 
     <string name="txt_welcome">Hello, welcome! Enter an account holder ID to view your bank statement: </string>
     <string name="txt_continue">Continue</string>
