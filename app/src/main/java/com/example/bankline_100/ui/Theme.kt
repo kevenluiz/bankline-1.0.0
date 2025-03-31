@@ -24,6 +24,7 @@ private val LightColorScheme =
         tertiary = Primary200,
     )
 
+@JvmOverloads
 @Composable
 fun Bankline100Theme(
     darkTheme: Boolean = isSystemInDarkTheme(),
