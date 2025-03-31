@@ -4,8 +4,6 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-
-data class Correntista(
-
-    val id: Int
+data class AccountHolder(
+    val id: Int,
 ) : Parcelable

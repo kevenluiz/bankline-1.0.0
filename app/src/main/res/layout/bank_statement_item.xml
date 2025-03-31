@@ -31,7 +31,7 @@
             app:layout_constraintBottom_toTopOf="@+id/tvValue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivIcon"
-            tools:text="Meu Primeiro Salário" />
+            tools:text="Meu Salário" />
 
         <TextView
             android:id="@+id/tvValue"
